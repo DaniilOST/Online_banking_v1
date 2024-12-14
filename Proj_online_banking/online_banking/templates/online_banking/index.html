@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Главная страница</title>
+</head>
+<body>
+    <h1>Добро пожаловать в наш онлайн-банк!</h1>
+    <div>
+        <a href="{% url 'online_banking:register' %}"><button>Регистрация</button></a>
+        <a href="{% url 'online_banking:login' %}"><button>Войти в аккаунт</button></a>
+    </div>
+</body>
+</html>

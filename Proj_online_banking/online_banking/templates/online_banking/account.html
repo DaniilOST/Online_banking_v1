@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Аккаунт</title>
+</head>
+<body>
+    <h1>Добро пожаловать, {{ user.username }}</h1>
+    <form method="post" action="{% url 'online_banking:logout' %}">
+        {% csrf_token %}
+        <button type="submit">Выйти</button>
+    </form>
+    <a href="{% url 'online_banking:transfer_funds' %}">Перевод средств</a>
+</body>
+</html>
+
+

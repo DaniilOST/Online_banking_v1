@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Перевод средств</title>
+</head>
+<body>
+    <h1>Перевод средств</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Перевести</button>
+    </form>
+    {% if messages %}
+    <ul>
+        {% for message in messages %}
+        <li>{{ message }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+    {% if form.errors %}
+    <ul>
+        {% for field, errors in form.errors.items %}
+        <li>{{ field }}: {{ errors }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+</body>
+</html>
+
